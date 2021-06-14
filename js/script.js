@@ -16,7 +16,7 @@ function GenRandomNumbers(min,max){
 var arrayRandomNumbers =[];
 
 for(var i=0; i<5 ; i++ ){
-    
+
     var randomNumbers = GenRandomNumbers(min,max);
 
     if(!arrayRandomNumbers.includes(randomNumbers)){
@@ -57,9 +57,9 @@ for(var i=0; i<5 ; i++){
 
 }
 
-alert("il tuo punteggio e': " + numbersReminded.length+ "su 5 ");
+alert("il tuo punteggio e': " + numbersReminded.length+ " su 5 ");
 
-},3000);
+},30000);
 
 
 
