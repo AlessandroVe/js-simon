@@ -39,24 +39,27 @@ setTimeout(function(){
     
     
  //Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-      
-    var numbersReminded=[];
-    var flag = false;
 
-    for(var i=0; i<5 ; i++ ){
-        if(arrayUserRemindNumber.includes(arrayRandomNumbers[i])){
-            flag = true;
-        }
+ 
+var numbersReminded=[];
+var flag = false;
 
-        while(flag){
-            numbersReminded.push(arrayRandomNumbers[i])
-        }
+
+
+
+for(var i=0; i<5 ; i++){
+    if(arrayRandomNumbers.includes(arrayUserRemindNumber[i])){
+        flag=true;
+        if(flag){
+            numbersReminded.push(arrayUserRemindNumber[i]);
+        };
+    }else{
+        flag=false;
     }
 
+}
 
-    
-    alert("il tuo punteggio e': " + numbersReminded.length);
-
+alert("il tuo punteggio e': " + numbersReminded.length);
 
 },3000);
 
