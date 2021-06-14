@@ -16,15 +16,18 @@ function GenRandomNumbers(min,max){
 var arrayRandomNumbers =[];
 
 for(var i=0; i<5 ; i++ ){
+    
     var randomNumbers = GenRandomNumbers(min,max);
-    arrayRandomNumbers.push(randomNumbers);
+
+    if(!arrayRandomNumbers.includes(randomNumbers)){
+        arrayRandomNumbers.push(randomNumbers);
+    }
 }
 
 alert("ricorda bene questi cinque numeri: " + arrayRandomNumbers);
 
 //Da lì parte un timer di 30 secondi.
 //Dopo 30 secondi l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-
 
 setTimeout(function(){
     
@@ -36,16 +39,11 @@ setTimeout(function(){
     }
     
     console.log (arrayUserRemindNumber);
-    
-    
+     
  //Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
- 
 var numbersReminded=[];
 var flag = false;
-
-
-
 
 for(var i=0; i<5 ; i++){
     if(arrayRandomNumbers.includes(arrayUserRemindNumber[i])){
@@ -59,7 +57,7 @@ for(var i=0; i<5 ; i++){
 
 }
 
-alert("il tuo punteggio e': " + numbersReminded.length);
+alert("il tuo punteggio e': " + numbersReminded.length+ "su 5 ");
 
 },3000);
 
